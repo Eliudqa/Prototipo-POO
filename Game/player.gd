@@ -41,7 +41,12 @@ func shoot_ray():
     # Aquí instancia el rayo o lanza el ataque
     print("¡Rayo disparado!")
 
-
+func take_damage(amount):
+    energy -= amount
+    if energy < 0:
+        energy = 0
+    update_energy_bar()
+    # Aquí puedes mostrar la animación de daño
 
 
 func _physics_process(delta):
@@ -71,8 +76,11 @@ func _physics_process(delta):
 
        
     else:
-        # Está quieto, reproducir Idle correspondiente
+     # Está quieto, reproducir Idle correspondiente
+     if facing_direction == "left" or facing_direction == "right":
         sprite_animation.play("Idle_" + facing_direction)
+     else:
+        sprite_animation.play("Idle_right")
 
     # Normalizar el vector para que no se mueva más rápido en diagonal
     if direction != Vector2.ZERO:
