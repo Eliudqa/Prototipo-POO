@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br80oxsmv2bw3"
-path="res://.godot/imported/Colors.png-33ac2f3e2c046f29cf7ddbced6220c98.ctex"
+uid="uid://c7i3irowd78og"
+path="res://.godot/imported/vacial.png-efb14fe8f2b906344969156db96757c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game/Initial Scene/Stamina/Colors.png"
-dest_files=["res://.godot/imported/Colors.png-33ac2f3e2c046f29cf7ddbced6220c98.ctex"]
+source_file="res://Game/Initial Scene/Stamina/vacial.png"
+dest_files=["res://.godot/imported/vacial.png-efb14fe8f2b906344969156db96757c7.ctex"]
 
 [params]
 

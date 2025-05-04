@@ -2,65 +2,93 @@ extends CharacterBody2D
 
 @onready var sprite_animation: AnimatedSprite2D = $AnimatedSprite2D
 
+var movement_timer := 0.0  # Acumula el tiempo que lleva moviéndose
+var energy_drain_interval := 45.0  # Tiempo necesario en movimiento para perder energía
+var energy := 81
+
+
 
 
 func _ready():
-	sprite_animation.play("Spawn")
-	energy_bar.value = energy
+    sprite_animation.play("Spawn")
+    energy_bar.value = energy
+    
 
 
 # Velocidad del personaje en píxeles por segundo
 var speed = 200
-#Declaracion de la energia. Esta rodado por conveniencia para que se vea bien la barra
-var energy := 107.0  
-var max_energy := 107.0 
+var facing_direction := "right"  # Por defecto mirando a la derecha
+#Declaracion de la energia
+var max_energy := 81.0 
 
 
 @onready var energy_bar: TextureProgressBar =$"/root/Escena de Aparicion/HUD/Stamina"
 
 func _input(event):
-	if event.is_action_pressed("shoot") and energy > 0:
-		shoot_ray()
-		energy -= 1
-		update_energy_bar()
+    if event.is_action_pressed("shoot") and energy > 0:
+        shoot_ray()
+        #Valor reescalado que significa 1 unidad en escala del 0-100. Se usa asi para
+        # mejor comprension de la energia, manejandolo de 1 en 1 en la escala del 1 al 100
+        energy -= 0.636
+        update_energy_bar()
 
 
 func update_energy_bar():
-	if energy_bar:
-		energy_bar.value = energy
+    if energy_bar:
+        energy_bar.value = energy
 
 func shoot_ray():
-	# Aquí instancia el rayo o lanza el ataque
-	print("¡Rayo disparado!")
+    # Aquí instancia el rayo o lanza el ataque
+    print("¡Rayo disparado!")
 
 
 
 
 func _physics_process(delta):
-	
-	var direction = Vector2.ZERO
-	
+    
+    var direction = Vector2.ZERO
+    
   
-	
-	if Input.is_action_pressed("ui_right"):
-		direction.x += 1		
-	if Input.is_action_pressed("ui_left"):
-		direction.x -= 1
-	if Input.is_action_pressed("ui_down"):
-		direction.y += 1
-	if Input.is_action_pressed("ui_up"):
-		direction.y -= 1
-  
-	# Animación y velocidad
-	if direction != Vector2.ZERO:
-		sprite_animation.play("Run")
-	else:
-		sprite_animation.play("Idle")  
+    
+     # Movimiento y dirección
+    if Input.is_action_pressed("ui_right"):
+        direction.x += 1
+        sprite_animation.play("Run_Right")
+        facing_direction = "right"
+    elif Input.is_action_pressed("ui_left"):
+        direction.x -= 1
+        sprite_animation.play("Run_Left")
+        facing_direction = "left"
+    elif Input.is_action_pressed("ui_down"):
+        sprite_animation.play("Run_Down")
+        facing_direction = "Down"
+        direction.y += 1
+    elif Input.is_action_pressed("ui_up"):
+        sprite_animation.play("Run_Up")
+        facing_direction = "Up"
+        direction.y -= 1
 
-	# Normalizar el vector para que no se mueva más rápido en diagonal
-	if direction != Vector2.ZERO:
-		direction = direction.normalized()
 
-	# Aplicar movimiento
-	velocity = direction * speed
-	move_and_slide()
+       
+    else:
+        # Está quieto, reproducir Idle correspondiente
+        sprite_animation.play("Idle_" + facing_direction)
+
+    # Normalizar el vector para que no se mueva más rápido en diagonal
+    if direction != Vector2.ZERO:
+        direction = direction.normalized()
+        
+    if direction != Vector2.ZERO:
+        direction = direction.normalized()
+        movement_timer += delta  # Acumula el tiempo solo cuando se mueve
+
+        if movement_timer >= energy_drain_interval:
+            if energy > 0:
+                energy -= 0.636
+                update_energy_bar()
+            movement_timer = 0.0  # Reinicia el temporizador
+
+
+    # Aplicar movimiento
+    velocity = direction * speed
+    move_and_slide()

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddwuoxawe1ftm"
-path="res://.godot/imported/Border.png-ae4089345835c3333212a41b7f474312.ctex"
+uid="uid://b8hnx7ma0ix78"
+path="res://.godot/imported/fondol.png-8c5f50c956543f7085621298dcd2f3d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game/Initial Scene/Stamina/Border.png"
-dest_files=["res://.godot/imported/Border.png-ae4089345835c3333212a41b7f474312.ctex"]
+source_file="res://Game/Initial Scene/Stamina/fondol.png"
+dest_files=["res://.godot/imported/fondol.png-8c5f50c956543f7085621298dcd2f3d8.ctex"]
 
 [params]
 
