@@ -66,11 +66,11 @@ func _physics_process(delta):
         facing_direction = "left"
     elif Input.is_action_pressed("ui_down"):
         sprite_animation.play("Run_Down")
-        facing_direction = "Down"
+        facing_direction = "down"
         direction.y += 1
     elif Input.is_action_pressed("ui_up"):
         sprite_animation.play("Run_Up")
-        facing_direction = "Up"
+        facing_direction = "up"
         direction.y -= 1
 
 
