@@ -1,4 +1,4 @@
-[gd_scene load_steps=121 format=4 uid="uid://csr7nqtdb10th"]
+[gd_scene load_steps=123 format=4 uid="uid://csr7nqtdb10th"]
 
 [ext_resource type="Texture2D" uid="uid://4ag4qrar1ux8" path="res://Game/Initial Scene/Ground/spr_tileset_sunnysideworld_16px.png" id="1_im0tj"]
 [ext_resource type="Texture2D" uid="uid://mfh6dk8m3gjk" path="res://Game/Initial Scene/Ground/Dirt - simplified.png" id="2_0221o"]
@@ -13,12 +13,12 @@
 [ext_resource type="Texture2D" uid="uid://vhdwredtcomh" path="res://Game/Initial Scene/Eve/Eve-Sheet.png" id="9_3hvp7"]
 [ext_resource type="Script" uid="uid://co4d1gyawr8vx" path="res://Game/texture_progress_bar.gd" id="10_bv86i"]
 [ext_resource type="Texture2D" uid="uid://icay1jy2qpfq" path="res://Game/Initial Scene/Stamina/fill.png" id="10_dyjxk"]
+[ext_resource type="Texture2D" uid="uid://dqskw44g2ux3g" path="res://Game/Initial Scene/Ambientation/trashcan.png" id="12_rqrti"]
 [ext_resource type="Shader" uid="uid://brv0jfv5mve1b" path="res://Game/fog.gdshader" id="12_wqcro"]
+[ext_resource type="Script" uid="uid://cbdkjcsjmo465" path="res://Game/loot_item.gd" id="13_wuegf"]
 [ext_resource type="Script" uid="uid://bdawowtyvudfk" path="res://Game/character_body_2d.gd" id="15_iktbg"]
 [ext_resource type="Texture2D" uid="uid://ck1l18hjcq7n" path="res://Game/Initial Scene/Robot/Die Robot Fly.png" id="16_sb06c"]
 [ext_resource type="Texture2D" uid="uid://c8eqfd3w0mgna" path="res://Game/Initial Scene/Robot/Fly Robot.png" id="17_g8qvx"]
-[ext_resource type="Script" uid="uid://dqcs2f6ica6sa" path="res://Game/node_2d.gd" id="18_g8qvx"]
-[ext_resource type="PackedScene" uid="uid://cuu7d3cymho78" path="res://Game/looteable_scene/Looteble_scene.tscn" id="19_3hvp7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0221o"]
 texture = ExtResource("1_im0tj")
@@ -1849,10 +1849,10 @@ texture = ExtResource("2_0221o")
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.5864, -4.76626, 8, -4.76626, 8, 8, -4.5864, 8)
 1:0/0 = 0
 1:0/0/terrain_set = 0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -4.94612, 8, -4.94612, 8, 8, -8, 8)
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:0/0 = 0
 2:0/0/terrain_set = 0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -4.94612, 5.12597, -4.94612, 5.12597, 8, -8, 8)
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:0/0 = 0
 4:0/0 = 0
 1:1/0 = 0
@@ -1862,13 +1862,13 @@ texture = ExtResource("2_0221o")
 1:1/0/terrains_peering_bit/left_side = 2
 2:1/0 = 0
 2:1/0/terrain_set = 0
-2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 4.76626, -8, 4.94611, 8, -8, 8)
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:1/0 = 0
 4:1/0 = 0
 0:2/0 = 0
 0:2/0/terrain_set = 0
 0:2/0/terrain = 2
-0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.76626, -8, 8, -8, 8, 8, -4.94612, 8)
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:2/0/terrains_peering_bit/right_side = 2
 0:2/0/terrains_peering_bit/top_side = 2
 0:2/0/terrains_peering_bit/top_right_corner = 2
@@ -1882,19 +1882,17 @@ texture = ExtResource("2_0221o")
 1:2/0/terrains_peering_bit/top_side = 0
 2:2/0 = 0
 2:2/0/terrain_set = 0
-2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 4.94611, -8, 4.94611, 8, -8, 8)
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:2/0 = 0
 4:2/0 = 0
 0:3/0 = 0
-0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.5864, -8, 8, -8, 8, -3.14753, -4.76626, -3.32739)
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:3/0 = 0
-1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -2.78781, -8, -2.96767)
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:3/0 = 0
-2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 5.12597, -8, 4.94611, -2.60795, -8, -2.96767)
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:3/0 = 0
 4:3/0 = 0
-0:1/0 = 0
-0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.5864, -8, 8, -8, 8, 8, -4.76626, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rqrti"]
 texture = ExtResource("3_wlrjm")
@@ -2952,11 +2950,11 @@ texture = ExtResource("2_p7ohr")
 46:23/0 = 0
 49:23/0 = 0
 49:23/0/terrain_set = 0
-49:23/0/physics_layer_0/polygon_0/points = PackedVector2Array(4.94611, -0.989223, 8, -4.06941, 8, 8, -0.629506, 8, -0.269788, 3.6871)
+49:23/0/physics_layer_0/polygon_0/points = PackedVector2Array(2.22349, -1.80397, 8, -4.06941, 8, 8, -3.14645, 8, -1.21663, 2.89474)
 49:23/0/terrains_peering_bit/bottom_right_corner = 0
 50:23/0 = 0
 50:23/0/terrain_set = 0
-50:23/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -3.50725, -3.86696, -0.989223, -0.0899296, 4.22668, 0.989223, 8, -8, 8)
+50:23/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -4.22668, -1.70866, -1.34894, 1.21663, 2.97864, 2.22349, 8, -8, 8)
 50:23/0/terrains_peering_bit/bottom_left_corner = 0
 51:23/0 = 0
 52:23/0 = 0
@@ -2984,11 +2982,11 @@ texture = ExtResource("2_p7ohr")
 46:24/0 = 0
 49:24/0 = 0
 49:24/0/terrain_set = 0
-49:24/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.96767, -8, 8, -8, 8, 2.96767, 2.60795, 2.06838, -0.809364, 0.0899296, -3.50725, -3.86696)
+49:24/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.6964, -8, 8, -8, 8, 4.67064, 0.544431, 3.12331, -2.43561, -0.429813, -4.21218, -3.06601)
 49:24/0/terrains_peering_bit/top_right_corner = 0
 50:24/0 = 0
 50:24/0/terrain_set = 0
-50:24/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 1.5288, -8, 1.5288, -4.76626, 0.449647, -0.989223, -1.88852, 1.70866, -8, 2.60795)
+50:24/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 3.19806, -8, 5.02551, -5.43162, 5.12704, -1.26907, 1.57365, 3.90873, -8, 5.02551)
 50:24/0/terrains_peering_bit/top_left_corner = 0
 51:24/0 = 0
 52:24/0 = 0
@@ -3735,42 +3733,42 @@ polygon = PackedVector2Array(4.94611, -1.5288, 5.30583, -8, 8, -8, 8, -1.34894, 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2abf2"]
 texture = ExtResource("2_0221o")
 0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.5864, -4.76626, 8, -4.5864, 8, 8, -4.5864, 8)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -4.94612, 8, -4.76626, 8, 8, -8, 8)
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:0/0 = 0
 2:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_wqcro")
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -4.76626, 4.94611, -4.76626, 4.76626, 8, -8, 8)
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:0/0 = 0
 4:0/0 = 0
 0:1/0 = 0
-0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.40654, -8, 8, -8, 8, 8, -4.5864, 8)
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:1/0 = 0
 2:1/0 = 0
 2:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_rqrti")
-2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 4.40654, -8, 4.40654, 8, -8, 8)
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:1/0 = 0
 4:1/0 = 0
 0:2/0 = 0
 0:2/0/terrain_set = 0
-0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.40654, -8, 8, -8, 8, 8, -4.40654, 8)
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:2/0 = 0
 1:2/0/terrain_set = 0
 2:2/0 = 0
 2:2/0/terrain_set = 0
 2:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_wuegf")
-2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 4.40654, -8, 4.40654, 8, -8, 8)
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:2/0 = 0
 4:2/0 = 0
 0:3/0 = 0
 0:3/0/terrain_set = 0
-0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -3.14753, -8, -2.96767)
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:3/0 = 0
 1:3/0/terrain_set = 0
-1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -2.78781, -8, -2.78781)
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:3/0 = 0
 2:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_1wf8w")
-2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 4.76626, -8, 4.76626, -2.96767, -8, -2.96767)
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:3/0 = 0
 4:3/0 = 0
 
@@ -4316,6 +4314,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_rqrti"]
+radius = 9.00283
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_u8e17"]
 atlas = ExtResource("9_3hvp7")
 region = Rect2(0, 0, 128, 128)
@@ -4570,6 +4571,8 @@ shader_parameter/noise_texture = SubResource("NoiseTexture2D_wuegf")
 shader_parameter/density = 0.643
 shader_parameter/speed = Vector2(0.02, 0.01)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_dyjxk"]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_602d3"]
 atlas = ExtResource("16_sb06c")
 region = Rect2(0, 0, 16, 24)
@@ -4681,20 +4684,21 @@ scale = Vector2(0.982882, 0.987849)
 script = ExtResource("5_di4k1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
-z_index = 1
 position = Vector2(556.799, 654)
 scale = Vector2(1.99387, 2.18748)
 sprite_frames = SubResource("SpriteFrames_im0tj")
 animation = &"Run_Up"
+frame_progress = 0.794341
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(556.757, 661.97)
+scale = Vector2(-2.41759, -2.48159)
+shape = SubResource("CircleShape2D_rqrti")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(556.799, 682)
 
 [node name="Guide" type="CharacterBody2D" parent="Player"]
-light_mask = 2
-visibility_layer = 2
-z_index = 2
-collision_layer = 2
 motion_mode = 1
 script = ExtResource("8_g8qvx")
 
@@ -4703,9 +4707,6 @@ position = Vector2(605.623, 643.001)
 scale = Vector2(0.499845, 0.499845)
 sprite_frames = SubResource("SpriteFrames_6tsht")
 animation = &"Run_Up"
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Player"]
-polygon = PackedVector2Array(555.422, 688.828, 560.762, 688.828, 573.446, 688.828, 577.451, 677.769, 576.116, 634.322, 564.1, 630.372, 542.738, 631.162, 534.727, 635.902, 534.727, 658.81, 535.394, 674.609, 538.732, 687.248, 545.408, 688.828)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
@@ -4724,10 +4725,9 @@ texture_progress = ExtResource("10_dyjxk")
 script = ExtResource("10_bv86i")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-modulate = Color(0.0156863, 0, 0, 1)
 position = Vector2(-194.219, -112.369)
 scale = Vector2(7.79408, 11.322)
-color = Color(0.658402, 0.434736, 0.222395, 1)
+color = Color(0.898039, 0.588235, 0.294118, 0.737255)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 layer = 2
@@ -4742,8 +4742,21 @@ offset_right = 1280.0
 offset_bottom = 720.0
 color = Color(0, 0, 0, 1)
 
+[node name="LootItem" type="Area2D" parent="."]
+position = Vector2(85.299, 115.491)
+script = ExtResource("13_wuegf")
+
+[node name="Sprite2D" type="Sprite2D" parent="LootItem"]
+position = Vector2(637.118, 626.614)
+scale = Vector2(1.14436, 1.14743)
+texture = ExtResource("12_rqrti")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LootItem"]
+position = Vector2(637.118, 625.834)
+scale = Vector2(1.65615, 1.65615)
+shape = SubResource("CircleShape2D_dyjxk")
+
 [node name="Enemy" type="CharacterBody2D" parent="."]
-z_index = 2
 position = Vector2(387.126, 576.672)
 collision_layer = 2
 collision_mask = 0
@@ -4768,9 +4781,7 @@ position = Vector2(16.59, 8.95551)
 scale = Vector2(-4.41364, -4.41364)
 shape = SubResource("CapsuleShape2D_iktbg")
 
-[node name="Spawner" type="Node2D" parent="."]
-script = ExtResource("18_g8qvx")
-loot_scene = ExtResource("19_3hvp7")
-
+[connection signal="body_entered" from="LootItem" to="LootItem" method="_on_body_entered"]
+[connection signal="body_exited" from="LootItem" to="LootItem" method="_on_body_exited"]
 [connection signal="body_entered" from="Enemy/Area2D" to="Enemy" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Enemy/Area2D" to="Enemy" method="_on_area_2d_body_exited"]

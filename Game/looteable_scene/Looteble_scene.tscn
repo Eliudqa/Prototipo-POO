@@ -1,0 +1,264 @@
+[gd_scene load_steps=17 format=3 uid="uid://cuu7d3cymho78"]
+
+[ext_resource type="Script" uid="uid://f3khkuyxheg1" path="res://Game/looteable_scene/looteble_scene.gd" id="1_amuka"]
+[ext_resource type="Script" uid="uid://cbdkjcsjmo465" path="res://Game/loot_item.gd" id="1_auiwj"]
+[ext_resource type="Texture2D" uid="uid://bhopxrvsrthwu" path="res://Game/looteable_scene/Sprites/Zombie-Tileset---_0157_Capa-158.png" id="5_ba6ie"]
+[ext_resource type="Texture2D" uid="uid://uh6nurs8wtis" path="res://Game/looteable_scene/Sprites/Zombie-Tileset---_0179_Capa-180.png" id="6_god3a"]
+[ext_resource type="Texture2D" uid="uid://cr8jd2d34cdjc" path="res://Game/looteable_scene/Sprites/Zombie-Tileset---_0192_Capa-193.png" id="7_jex8q"]
+[ext_resource type="Texture2D" uid="uid://cwo5u0rka70bo" path="res://Game/looteable_scene/Sprites/Zombie-Tileset---_0185_Capa-186.png" id="8_p7d8f"]
+[ext_resource type="Texture2D" uid="uid://cksb6k6nw15up" path="res://Game/looteable_scene/Sprites/Zombie-Tileset---_0182_Capa-183.png" id="9_65mw8"]
+[ext_resource type="Texture2D" uid="uid://bodyeuo4p4p3i" path="res://Game/looteable_scene/Sprites/Zombie-Tileset---_0188_Capa-189.png" id="9_god3a"]
+[ext_resource type="Texture2D" uid="uid://daej3vc2mbxrt" path="res://Game/looteable_scene/Sprites/Zombie-Tileset---_0189_Capa-190.png" id="10_ctb8a"]
+[ext_resource type="Texture2D" uid="uid://dlkwkyu5jvk1o" path="res://Game/looteable_scene/Sprites/Signal No.png" id="10_jex8q"]
+[ext_resource type="Texture2D" uid="uid://dpi3vknc2qia3" path="res://Game/looteable_scene/Sprites/Zombie-Tileset---_0193_Capa-194.png" id="11_p7d8f"]
+[ext_resource type="Texture2D" uid="uid://cu0m0mtko5t0o" path="res://Game/looteable_scene/Sprites/Zombie-Tileset---_0191_Capa-192.png" id="12_65mw8"]
+[ext_resource type="Texture2D" uid="uid://df041i4by1mjv" path="res://Game/looteable_scene/Sprites/Radio.png" id="13_ctb8a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_su33j"]
+radius = 13.0093
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4053k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1sgkp"]
+
+[node name="Looteable_scene" type="Node2D"]
+script = ExtResource("1_amuka")
+
+[node name="LootItem3" type="Area2D" parent="."]
+position = Vector2(53, -341)
+scale = Vector2(0.991404, 0.991404)
+script = ExtResource("1_auiwj")
+
+[node name="Sprite2D" type="Sprite2D" parent="LootItem3"]
+position = Vector2(637.118, 626.614)
+scale = Vector2(3.27011, 5.00019)
+texture = ExtResource("5_ba6ie")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LootItem3"]
+position = Vector2(638.489, 625.376)
+scale = Vector2(1.65615, 4.05765)
+shape = SubResource("CircleShape2D_su33j")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LootItem3"]
+scale = Vector2(1.00486, 1)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LootItem3/StaticBody2D"]
+polygon = PackedVector2Array(630.38, 659.671, 637.407, 659.671, 639.414, 645.549, 650.456, 635.463, 652.464, 609.237, 644, 587, 631, 587, 617, 606, 617, 625, 631, 646)
+
+[node name="LootItem4" type="Area2D" parent="."]
+position = Vector2(-194, -214)
+script = ExtResource("1_auiwj")
+
+[node name="Sprite2D" type="Sprite2D" parent="LootItem4"]
+position = Vector2(637.118, 626.614)
+scale = Vector2(3.86181, 3.87217)
+texture = ExtResource("6_god3a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LootItem4"]
+position = Vector2(637.118, 625.834)
+scale = Vector2(7.0124, -3.93244)
+shape = SubResource("CircleShape2D_su33j")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LootItem4"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LootItem4/StaticBody2D"]
+polygon = PackedVector2Array(578, 652, 578, 612, 586, 603, 599, 603, 608, 592, 673, 592, 681, 600, 693, 608, 700, 620, 700, 653, 677, 653)
+
+[node name="LootItem5" type="Area2D" parent="."]
+position = Vector2(14, -132)
+script = ExtResource("1_auiwj")
+
+[node name="Sprite2D" type="Sprite2D" parent="LootItem5"]
+position = Vector2(637.118, 626.614)
+scale = Vector2(-4.35864, -4.37034)
+texture = ExtResource("7_jex8q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LootItem5"]
+position = Vector2(637.118, 625.834)
+scale = Vector2(1.65615, 1.65615)
+shape = SubResource("CircleShape2D_su33j")
+
+[node name="LootItem6" type="Area2D" parent="."]
+position = Vector2(191, -86)
+script = ExtResource("1_auiwj")
+
+[node name="Sprite2D" type="Sprite2D" parent="LootItem6"]
+position = Vector2(637.118, 626.614)
+scale = Vector2(3.59922, 3.60888)
+texture = ExtResource("8_p7d8f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LootItem6"]
+position = Vector2(639, 626)
+scale = Vector2(6.48, 3.47321)
+shape = SubResource("CircleShape2D_4053k")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LootItem6"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LootItem6/StaticBody2D"]
+polygon = PackedVector2Array(577, 650, 578, 612, 586, 603, 599, 603, 612, 594, 671, 595, 676, 607, 693, 608, 696, 621, 691, 658, 631, 659)
+
+[node name="LootItem7" type="Area2D" parent="."]
+position = Vector2(85.299, 115.491)
+script = ExtResource("1_auiwj")
+
+[node name="Sprite2D" type="Sprite2D" parent="LootItem7"]
+position = Vector2(941.701, 438.509)
+scale = Vector2(3.25869, 3.26743)
+texture = ExtResource("9_65mw8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LootItem7"]
+position = Vector2(940.701, 444.509)
+scale = Vector2(-3.27191, 6.70421)
+shape = SubResource("CircleShape2D_su33j")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LootItem7"]
+position = Vector2(299.701, -177.491)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LootItem7/StaticBody2D"]
+polygon = PackedVector2Array(621, 670, 616, 643, 616, 602, 616, 562, 667, 559, 668, 633, 675, 670)
+
+[node name="LootItem8" type="Area2D" parent="."]
+position = Vector2(532, -73)
+script = ExtResource("1_auiwj")
+
+[node name="Sprite2D" type="Sprite2D" parent="LootItem8"]
+position = Vector2(637.118, 626.614)
+scale = Vector2(2.75032, 2.7577)
+texture = ExtResource("10_ctb8a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LootItem8"]
+position = Vector2(636, 627)
+scale = Vector2(5.05082, 2.96907)
+shape = SubResource("CircleShape2D_1sgkp")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LootItem8"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LootItem8/StaticBody2D"]
+scale = Vector2(0.999423, 1.00119)
+polygon = PackedVector2Array(619.357, 649.229, 592.342, 642.238, 592.342, 609.277, 620.358, 602.285, 657.379, 602.285, 681.393, 613.272, 682.394, 641.239, 658.38, 650.228)
+
+[node name="LootItem9" type="Area2D" parent="."]
+position = Vector2(376, -363)
+script = ExtResource("1_auiwj")
+
+[node name="Sprite2D" type="Sprite2D" parent="LootItem9"]
+position = Vector2(637.118, 626.614)
+scale = Vector2(2.75032, 2.7577)
+texture = ExtResource("10_ctb8a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LootItem9"]
+position = Vector2(636, 627)
+scale = Vector2(5.05082, 2.96907)
+shape = SubResource("CircleShape2D_1sgkp")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LootItem9"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LootItem9/StaticBody2D"]
+scale = Vector2(0.999423, 1.00119)
+polygon = PackedVector2Array(619.357, 649.229, 592.342, 642.238, 592.342, 609.277, 620.358, 602.285, 657.379, 602.285, 681.393, 613.272, 682.394, 641.239, 658.38, 650.228)
+
+[node name="LootItem10" type="Area2D" parent="."]
+position = Vector2(-241, -445)
+script = ExtResource("1_auiwj")
+
+[node name="Sprite2D" type="Sprite2D" parent="LootItem10"]
+position = Vector2(637.118, 626.614)
+scale = Vector2(2.75032, 2.7577)
+texture = ExtResource("9_god3a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LootItem10"]
+position = Vector2(636, 627)
+scale = Vector2(5.05082, 2.96907)
+shape = SubResource("CircleShape2D_1sgkp")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LootItem10"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LootItem10/StaticBody2D"]
+scale = Vector2(0.999423, 1.00119)
+polygon = PackedVector2Array(619.357, 649.229, 592.342, 642.238, 592.342, 609.277, 620.358, 602.285, 657.379, 602.285, 681.393, 613.272, 682.394, 641.239, 658.38, 650.228)
+
+[node name="LootItem12" type="Area2D" parent="."]
+position = Vector2(246, -277)
+script = ExtResource("1_auiwj")
+
+[node name="Sprite2D" type="Sprite2D" parent="LootItem12"]
+position = Vector2(637.118, 626.614)
+scale = Vector2(3.90226, 6.87153)
+texture = ExtResource("10_jex8q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LootItem12"]
+position = Vector2(636, 627)
+scale = Vector2(2.49082, 5.66209)
+shape = SubResource("CircleShape2D_1sgkp")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LootItem12"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LootItem12/StaticBody2D"]
+polygon = PackedVector2Array(634, 666, 639, 667, 642, 645, 656, 627, 656, 607, 644, 587, 631, 587, 617, 606, 617, 625, 631, 646)
+
+[node name="LootItem13" type="Area2D" parent="."]
+position = Vector2(-55, -43)
+script = ExtResource("1_auiwj")
+
+[node name="Sprite2D" type="Sprite2D" parent="LootItem13"]
+position = Vector2(637.118, 626.614)
+scale = Vector2(5.30114, 4.35235)
+texture = ExtResource("11_p7d8f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LootItem13"]
+position = Vector2(636, 627)
+scale = Vector2(2.88958, 2.96907)
+shape = SubResource("CircleShape2D_1sgkp")
+
+[node name="LootItem14" type="Area2D" parent="."]
+position = Vector2(49, 38)
+script = ExtResource("1_auiwj")
+
+[node name="Sprite2D" type="Sprite2D" parent="LootItem14"]
+position = Vector2(637.118, 626.614)
+scale = Vector2(3.59832, 3.60797)
+texture = ExtResource("12_65mw8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LootItem14"]
+position = Vector2(636, 627)
+scale = Vector2(5.05082, 2.96907)
+shape = SubResource("CircleShape2D_1sgkp")
+
+[node name="LootItem15" type="Area2D" parent="."]
+position = Vector2(168, 34)
+script = ExtResource("1_auiwj")
+
+[node name="Sprite2D" type="Sprite2D" parent="LootItem15"]
+position = Vector2(637.118, 626.614)
+scale = Vector2(2.75032, 2.7577)
+texture = ExtResource("13_ctb8a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LootItem15"]
+position = Vector2(637, 639)
+scale = Vector2(1.82937, -1.81761)
+shape = SubResource("CircleShape2D_1sgkp")
+
+[connection signal="body_entered" from="LootItem3" to="LootItem3" method="_on_body_entered"]
+[connection signal="body_exited" from="LootItem3" to="LootItem3" method="_on_body_exited"]
+[connection signal="body_entered" from="LootItem4" to="LootItem4" method="_on_body_entered"]
+[connection signal="body_exited" from="LootItem4" to="LootItem4" method="_on_body_exited"]
+[connection signal="body_entered" from="LootItem5" to="LootItem5" method="_on_body_entered"]
+[connection signal="body_exited" from="LootItem5" to="LootItem5" method="_on_body_exited"]
+[connection signal="body_entered" from="LootItem6" to="LootItem6" method="_on_body_entered"]
+[connection signal="body_exited" from="LootItem6" to="LootItem6" method="_on_body_exited"]
+[connection signal="body_entered" from="LootItem7" to="LootItem7" method="_on_body_entered"]
+[connection signal="body_exited" from="LootItem7" to="LootItem7" method="_on_body_exited"]
+[connection signal="body_entered" from="LootItem8" to="LootItem8" method="_on_body_entered"]
+[connection signal="body_exited" from="LootItem8" to="LootItem8" method="_on_body_exited"]
+[connection signal="body_entered" from="LootItem9" to="LootItem9" method="_on_body_entered"]
+[connection signal="body_exited" from="LootItem9" to="LootItem9" method="_on_body_exited"]
+[connection signal="body_entered" from="LootItem10" to="LootItem10" method="_on_body_entered"]
+[connection signal="body_exited" from="LootItem10" to="LootItem10" method="_on_body_exited"]
+[connection signal="body_entered" from="LootItem12" to="LootItem12" method="_on_body_entered"]
+[connection signal="body_exited" from="LootItem12" to="LootItem12" method="_on_body_exited"]
+[connection signal="body_entered" from="LootItem13" to="LootItem13" method="_on_body_entered"]
+[connection signal="body_exited" from="LootItem13" to="LootItem13" method="_on_body_exited"]
+[connection signal="body_entered" from="LootItem14" to="LootItem14" method="_on_body_entered"]
+[connection signal="body_exited" from="LootItem14" to="LootItem14" method="_on_body_exited"]
+[connection signal="body_entered" from="LootItem15" to="LootItem15" method="_on_body_entered"]
+[connection signal="body_exited" from="LootItem15" to="LootItem15" method="_on_body_exited"]

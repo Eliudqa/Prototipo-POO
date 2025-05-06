@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://mixefj32bivx"]
+[gd_scene load_steps=16 format=3 uid="uid://b35r5oc7dgkag"]
 
 [ext_resource type="Script" uid="uid://bdawowtyvudfk" path="res://Game/character_body_2d.gd" id="1_hn12h"]
 [ext_resource type="Texture2D" uid="uid://ck1l18hjcq7n" path="res://Game/Initial Scene/Robot/Die Robot Fly.png" id="2_ihfcg"]
